@@ -1,4 +1,4 @@
-#core #weapons
+#legion-core #weapons
 ## Overview
 Each feature would be tied to its own magazine. Most units would only use one feature per role, so this saved time for players switching between different firing modes / muzzles.
 
