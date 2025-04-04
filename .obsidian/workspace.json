@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "To Do List.md",
+                "file": "Scripting Notes/Vectors.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "To Do List"
+              "title": "Vectors"
             }
           }
         ]
@@ -171,10 +171,12 @@
   },
   "active": "8bfb9007eb4cbc98",
   "lastOpenFiles": [
-    "21st Nova Corps/Jumppacks.md",
-    "To Do List.md",
-    "Legion Studios/Weapons/Fusion Cutter.md",
+    "Scripting Notes/Profiling.md",
     "Scripting Notes/Vectors.md",
+    "To Do List.md",
+    "Websites.md",
+    "21st Nova Corps/Jumppacks.md",
+    "Legion Studios/Weapons/Fusion Cutter.md",
     "Legion Studios/Weapons",
     "Scripting Notes",
     "21st Nova Corps",
