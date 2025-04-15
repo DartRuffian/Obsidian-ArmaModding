@@ -2,3 +2,27 @@
 Do you use the magazine for a disposable launcher with CBA? CBA will replace magazines for disposable launchers with pre-loaded launchers. You will need separate magazine classes for the normal and disposable launchers.
 
 See [fnc_replaceMagazineCargo](https://github.com/CBATeam/CBA_A3/blob/master/addons/disposable/fnc_replaceMagazineCargo.sqf)
+
+
+## Weapon `picture`s
+There are several common issues when trying to set the `picture` of an item. First off, the pad *must* begin with a leading backslash (`\`).
+
+The other common, but more complex, issue is when a weapon is configured to use the old system for pictures where you'd create separate icons for the weapon on its own, the weapon with an optic attached, the weapon with an optic and a bipod attached, etc. etc.
+
+To fix the issue, `iconScale` in each `xSlot` class needs to be set to a value greater than 0.
+```cpp
+class WeaponSlotsInfo: WeaponSlotsInfo {
+    class CowsSlot: CowsSlot {
+        iconScale = 0.2; // Forces Arma to use the "new" layered system
+    };
+    class MuzzleSlot: MuzzleSlot {
+        iconScale = 0.2;
+    };
+    class PointerSlot: PointerSlot {
+        iconScale = 0.2;
+    };
+    class UnderBarrelSlot: UnderBarrelSlot {
+        iconScale = 0.2;
+    };
+};
+```
