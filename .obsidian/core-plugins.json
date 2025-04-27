@@ -1,10 +1,10 @@
 {
   "file-explorer": true,
   "global-search": true,
-  "switcher": true,
+  "switcher": false,
   "graph": true,
   "backlink": true,
-  "canvas": true,
+  "canvas": false,
   "outgoing-link": true,
   "tag-pane": true,
   "properties": false,
