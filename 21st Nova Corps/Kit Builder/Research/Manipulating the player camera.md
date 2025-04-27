@@ -1,8 +1,4 @@
----
-tags:
-  - kitbuilder
-  - relatedresearch
----
+#kitbuilder #research 
 # Creating and entering the camera
 You can create and enter the camera using the [camCreate](https://community.bistudio.com/wiki/camCreate) function in conjunction with [cameraEffect](https://community.bistudio.com/wiki/cameraEffect) function. This camera can be manipulated similar to objects using functions like [attachTo](https://community.bistudio.com/wiki/attachTo).
 

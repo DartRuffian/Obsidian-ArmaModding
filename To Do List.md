@@ -1,3 +1,4 @@
+#projects 
 ## 21st Nova Corps
 1. [x] Joint Op Resupply
 	- Get all magazines in players, filter our 21st mags

@@ -1,4 +1,4 @@
-#melee-mod #wishlist 
+#melee-mod #features 
 
 Weapons can configure what type of wound(s) they will cause, a la D&D damage types.
 Examples:
