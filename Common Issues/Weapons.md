@@ -26,3 +26,42 @@ class WeaponSlotsInfo: WeaponSlotsInfo {
     };
 };
 ```
+
+## Weapons with Attachments
+Weapons can be configured to have certain attachments by default with its `LinkedItems` class.
+
+```cpp
+class LinkedItems {
+    class LinkedItemOptic {
+        slot = "CowsSlot";
+        item = "optic_Arco_AK_lush_F";
+    };
+    class LinkedItemAcc {
+        slot = "PointerSlot";
+        item = "acc_pointer_IR";
+    };
+    class LinkedItemMuzzle {
+        slot = "MuzzleSlot";
+        item = "muzzle_snds_B_lush_F";
+    };
+    class LinkedItemsUnder {
+        slot = "UnderBarrelSlot";
+        item = "bipod_03_F_blk";
+    };
+};
+```
+
+**The value for `slot` is case-sensitive**, and must match how it is defined in the weapon's `WeaponSlotsInfo` classes. To save yourself the headache, you should always capitalize the first letter in the name, and the s in "Slot".
+
+Example:
+```cpp
+class WeaponSlotsInfo: WeaponSlotsInfo {
+    class cowsslot: CowsSlot { ... };
+};
+class LinkedItems {
+    class LinkedItemOptic {
+        slot = "CowsSlot"; // Case doesn't match WeaponSlotsInfo, won't work
+        item = "optic_Arco_AK_lush_F";
+    }
+};
+```

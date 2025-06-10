@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "dceedc233ac0f68b",
+        "id": "18efb8135bd9cba3",
         "type": "tabs",
         "children": [
           {
-            "id": "1cd24c56631ee540",
+            "id": "18655b7af5acf443",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "To Do List.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "To Do List"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#required-assets",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -79,7 +83,74 @@
   "right": {
     "id": "fc69e953bad81bb7",
     "type": "split",
-    "children": [],
+    "children": [
+      {
+        "id": "67e5276254302a9f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7bb4210754efda66",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "7303f4769d1db981",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "f7e8cd5e42f159f9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d41ab508ce4da8ea",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
@@ -93,45 +164,45 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "26ad8fe1dbe559ee",
+  "active": "18655b7af5acf443",
   "lastOpenFiles": [
+    "{E4E30F96-32E6-42FC-9174-5C46FAD6D58F}.png",
     "To Do List.md",
-    "21st Nova Corps/Kit Builder/Features/Saving Kits.md",
-    "21st Nova Corps/Kit Builder/Features/Features.md",
+    "21st Nova Corps/21st Nova Corps.md",
     "21st Nova Corps/Kit Builder/Kit Builder.md",
-    "21st Nova Corps/Kit Builder/Features/Interface.md",
-    "21st Nova Corps/Kit Builder/How It Will Work/Interface.md",
-    "21st Nova Corps/Kit Builder/How It Will Work/How it Will Work.md",
-    "21st Nova Corps/Kit Builder/How It Will Work/Data Saving.md",
-    "21st Nova Corps/Kit builder/Required Functions/Required functions.md",
-    "21st Nova Corps/Kit Builder/Required Functions/Required functions.md",
+    "21st Nova Corps/Resupply Boxes/Resupply Boxes.md",
+    "21st Nova Corps/Resupply Boxes/Research/Research.md",
+    "21st Nova Corps/Resupply Boxes/Research/Manipulating the player camera.md",
+    "21st Nova Corps/Resupply Boxes/Wishlist/Wishlist.md",
+    "21st Nova Corps/Resupply Boxes/Wishlist/Changelog Page.md",
+    "21st Nova Corps/Resupply Boxes/Features/UI sound effects.md",
+    "21st Nova Corps/Resupply Boxes/Features/Saving Kits.md",
+    "21st Nova Corps/Resupply Boxes/Features/Interface.md",
+    "21st Nova Corps/Resupply Boxes/Features/Features.md",
+    "21st Nova Corps/Resupply Boxes/Features/Default Slot Selection.md",
+    "21st Nova Corps/Resupply Boxes/Features/Customizable Colour Theme.md",
+    "21st Nova Corps/Resupply Boxes/Features/Custom Helmets and Armour.md",
+    "21st Nova Corps/Resupply Boxes/Features/Bandage Count Management.md",
+    "21st Nova Corps/Resupply Boxes/Features/Conditional Options.md",
+    "21st Nova Corps/Resupply Boxes/Research",
+    "21st Nova Corps/Resupply Boxes/Wishlist",
+    "21st Nova Corps/Resupply Boxes/Features",
+    "21st Nova Corps/Resupply Boxes",
+    "Scoreboard/Features/Features.md",
+    "Scoreboard/Features/Untitled.md",
+    "2025-05-31.md",
+    "Melee Mod/Features/Features.md",
+    "Melee Mod/Features/Movesets.md",
+    "Melee Mod/Features/Damage Types.md",
+    "Scoreboard/Features",
+    "Scoreboard/Scoreboard.md",
+    "Melee Mod/Melee Mod.md",
+    "Scoreboard",
+    "MCC Explosives Rewrite/Features",
+    "MCC Explosives Rewrite",
     "21st Nova Corps/Kit Builder/Required Functions",
     "21st Nova Corps/Kit builder/Required Functions",
-    "21st Nova Corps/Kit Builder/Features/UI sound effects.md",
-    "21st Nova Corps/Kit Builder/Features/Default Slot Selection.md",
-    "21st Nova Corps/Kit Builder/Features/Customizable Colour Theme.md",
-    "21st Nova Corps/Kit Builder/Features/Custom Helmets and Armour.md",
-    "21st Nova Corps/Kit Builder/Features/Conditional Options.md",
-    "21st Nova Corps/Kit Builder/Features/Bandage Count Management.md",
-    "21st Nova Corps/Kit Builder/Required Functions/Bandage Combination.md",
-    "21st Nova Corps/Kit Builder/Research/Manipulating the player camera.md",
-    "21st Nova Corps/Kit Builder/Research/Research.md",
-    "Melee Mod/Required Assets/Required Assets.md",
-    "Melee Mod/Required Assets/Animations.md",
-    "Melee Mod/Melee Mod.md",
-    "Melee Mod/Research/Research.md",
-    "Melee Mod/Research",
-    "Melee Mod/Required Assets",
-    "Melee Mod/Wishlist/Vanilla Damage Compability.md",
-    "Melee Mod/Features/Stealth Kills.md",
-    "Melee Mod/Features/Features.md",
     "Untitled.canvas",
-    "Untitled 1.canvas",
-    "Melee Mod/Wishlist",
-    "Legion Studios/Battlefields",
-    "Legion Studios/Core/Fusion Cutter/Wishlist",
-    "21st Nova Corps/Kit Builder/Wishlist",
-    "Legion Studios/Core",
-    "Legion Studios/Core/Fusion Cutter/Features"
+    "Untitled 1.canvas"
   ]
 }

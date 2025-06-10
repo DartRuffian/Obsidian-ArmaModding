@@ -1,3 +1,3 @@
 #kitbuilder #wishlist 
 
-[[Changelog Page]]
+[[21st Nova Corps/Kit Builder/Wishlist/Changelog Page]]
