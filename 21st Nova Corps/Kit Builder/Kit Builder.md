@@ -9,9 +9,6 @@ Kits that people have saved should still work after the loadout scripts have bee
 - Any updates to kits will happen seamlessly
 - We will be able to retain the customizability of our current kits without arsenal access.
 
-# Features
-[[21st Nova Corps/Kit Builder/Features/Features]]
-# Wishlist
-[[21st Nova Corps/Kit Builder/Wishlist/Wishlist]]
-# Related research
-[[21st Nova Corps/Kit Builder/Research/Research]]
+[[21st Nova Corps/Kit Builder/Features/Features|Features]]
+[[21st Nova Corps/Kit Builder/Wishlist/Wishlist|Wishlist]]
+[[21st Nova Corps/Kit Builder/Research/Research|Research]]
