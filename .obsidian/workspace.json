@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mortar AI/Statemachine/Statemachine.md",
+                "file": "Mortar AI/Statemachine/States.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Statemachine"
+              "title": "States"
             }
           },
           {
@@ -63,8 +63,7 @@
               "title": "Statemachine"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -209,12 +208,12 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "102913da5d8e3039",
+  "active": "b694648174b85b7a",
   "lastOpenFiles": [
-    "Mortar AI/Statemachine/States.md",
     "Excalidraw/Reposition Example.excalidraw.svg",
-    "Excalidraw/Reposition Example.excalidraw.md",
+    "Mortar AI/Statemachine/States.md",
     "Mortar AI/Statemachine/Statemachine.md",
+    "Excalidraw/Reposition Example.excalidraw.md",
     "Excalidraw/Statemachine.excalidraw.md",
     "Excalidraw/Statemachine.excalidraw.svg",
     "Excalidraw/Statemachine 2026-01-24 20.27.36.excalidraw.md",
