@@ -9,6 +9,7 @@ Default state, transition to other states.
 1. Assemble mortar
 2. Mount mortar
 3. Assign mortar as LAMBS artillery
+
 If engaged, the gunner will exit and disassemble the mortar and then return fire.
 
 ## Await Fire Mission
@@ -28,6 +29,7 @@ If engaged, the gunner will exit and disassemble the mortar and then return fire
 1. Mortar is removed from LAMBS artillery pool
 2. Dismount mortar
 3. Disassemble mortar
+
 If safe, the mortar gunner will move to reposition, or will return fire if engaged.
 
 ## Combat
@@ -36,6 +38,7 @@ No special behavior, standard vanilla / LAMBS handling.
 ## Reposition
 1. Move at least 500m away from last position
 2. While repositioning, only engage if fired upon or enemies are within 100m
+
 Will reposition until they are:
 - 500m away from their last mortar position **or** last position where they were engaged.
 
