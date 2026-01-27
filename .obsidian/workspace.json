@@ -25,45 +25,16 @@
             "id": "75cf81f40436a64a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Mortar AI/Statemachine/States.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/Reposition Example.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "States"
-            }
-          },
-          {
-            "id": "102913da5d8e3039",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mortar AI/Statemachine/Statemachine.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Statemachine"
-            }
-          },
-          {
-            "id": "63bf9c751bd30f53",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mortar AI/Statemachine/Statemachine.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Statemachine"
+              "icon": "excalidraw-icon",
+              "title": "Reposition Example.excalidraw"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -208,21 +179,23 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "b694648174b85b7a",
+  "active": "75cf81f40436a64a",
   "lastOpenFiles": [
     "Mortar AI/Statemachine/States.md",
-    "Excalidraw/Reposition Example.excalidraw.svg",
+    "Importing/Vehicles/Pylons.md",
+    "Mortar AI/Mortar AI.md",
+    "Mortar AI/Features/Features.md",
+    "Websites.md",
+    "Untitled.base",
     "Mortar AI/Statemachine/Statemachine.md",
     "Excalidraw/Reposition Example.excalidraw.md",
+    "Excalidraw/Reposition Example.excalidraw.svg",
     "Excalidraw/Statemachine.excalidraw.md",
     "Excalidraw/Statemachine.excalidraw.svg",
     "Excalidraw/Statemachine 2026-01-24 20.27.36.excalidraw.md",
     "Untitled",
-    "Mortar AI/Features/Features.md",
     "Legion Studios/Insurrection/Insurrection.md",
-    "Websites.md",
     "Emissive in Arma.md",
-    "Mortar AI/Mortar AI.md",
     "Common Issues/Common Issues.md",
     "21st Nova Corps/21st Nova Corps.md",
     "21st Nova Corps/Resupply Boxes/Resupply Boxes.md",
@@ -232,7 +205,6 @@
     "MCC Explosives Rewrite/MCC Explosives Rewrite.md",
     "Mortar AI/Features",
     "Mortar AI",
-    "Importing/Vehicles/Pylons.md",
     "Importing/Props/Doors.md",
     "Importing/Vehicles/Behavior.md",
     "Importing/Props",
@@ -246,7 +218,6 @@
     "Legion Studios/Core/Fusion Cutter/Features/Slicing.md",
     "Legion Studios/Core/Fusion Cutter/Features/Features.md",
     "Legion Studios/Legion Studios.md",
-    "Legion Studios/Insurrection",
     "rappel.png",
     "zipline.png",
     "Legion Studios/Core/Ascension Cables/Images/rappel.png",
