@@ -1,0 +1,1 @@
+#mortar-ai #statemachine  ![[Statemachine 2026-01-24 20.51.21.excalidraw]]
