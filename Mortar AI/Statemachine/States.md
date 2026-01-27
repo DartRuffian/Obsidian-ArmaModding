@@ -40,7 +40,7 @@ No special behavior, standard vanilla / LAMBS handling.
 2. While repositioning, only engage if fired upon
 
 The mortar gunner will try to find a position that is 500m away from their last mortar position **or** last combat position (if they were engaged while repositioning) **and** the closest enemy contact.
-![[Drawing 2026-01-26 23.17.03.excalidraw]]
+![[Reposition Example.excalidraw.svg]]
 
 ## Dead
 Mortar gunner is dead, exit state machine.
