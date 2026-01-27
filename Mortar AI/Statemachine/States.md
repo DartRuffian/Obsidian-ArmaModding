@@ -41,7 +41,8 @@ No special behavior, standard vanilla / LAMBS handling.
 
 The mortar gunner will try to find a position that is 500m away from their last mortar position **or** last combat position (if they were engaged while repositioning) **and** the closest enemy contact.
 
-![[Excalidraw/Reposition Example.excalidraw.svg]]
+![[Reposition Example.excalidraw.svg]]
+![Excalidraw/Reposition Example.excalidraw.svg](https://github.com/DartRuffian/Obsidian-ArmaModding/blob/main/Excalidraw/Reposition%20Example.excalidraw.svg)
 
 ## Dead
 Mortar gunner is dead, exit state machine.
