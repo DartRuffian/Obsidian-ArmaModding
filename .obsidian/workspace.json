@@ -27,10 +27,10 @@
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Excalidraw/Reposition Example.excalidraw.md"
+                "file": "Excalidraw/Statemachine.excalidraw.md"
               },
               "icon": "excalidraw-icon",
-              "title": "Reposition Example.excalidraw"
+              "title": "Statemachine.excalidraw"
             }
           }
         ],
@@ -179,16 +179,16 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "75cf81f40436a64a",
+  "active": "26ad8fe1dbe559ee",
   "lastOpenFiles": [
+    "Mortar AI/Statemachine/Statemachine.md",
     "Mortar AI/Statemachine/States.md",
-    "Importing/Vehicles/Pylons.md",
     "Mortar AI/Mortar AI.md",
+    "Excalidraw/Reposition Example.excalidraw.md",
+    "Importing/Vehicles/Pylons.md",
     "Mortar AI/Features/Features.md",
     "Websites.md",
     "Untitled.base",
-    "Mortar AI/Statemachine/Statemachine.md",
-    "Excalidraw/Reposition Example.excalidraw.md",
     "Excalidraw/Reposition Example.excalidraw.svg",
     "Excalidraw/Statemachine.excalidraw.md",
     "Excalidraw/Statemachine.excalidraw.svg",
