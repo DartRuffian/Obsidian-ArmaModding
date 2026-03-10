@@ -1,3 +1,3 @@
 #melee-mod #required-assets
 
-[[Animations]]
+[[Melee Mod/Required Assets/Animations]]

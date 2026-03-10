@@ -10,13 +10,15 @@ These are the exact animation source names that `BIS_fnc_door` will animate, wit
 
 The `sound` and `noSound` animation sources will always be used when opening / closing the door, and the `locked` animation will be used when trying to open a locked door.
 
+If there are multiple parts of a door (e.g. double doors), then there should be a selection for each part of the door, and should be named as `door_NUMBERa`, `door_NUMBERb`, etc. For example: `door_1a`, `door_1b`, `door_1c`. For door purposes, there shouldn't be a separate selection that contains all parts of the door, just the individual lettered selections. 
+
 ```cpp
 class AnimationSources {
     class Door_NUMBER_sound_source {
         source = "user";
         initPhase = 0;
         animPeriod = 1;
-        sound = "GateDoorsSound"; // class in CfgAnimationSourceSounds
+        sound = "YourPrefix_door"; // class in CfgAnimationSourceSounds
         soundPosition = "door_action_point"; // memory point for sound origin
     };
     class Door_NUMBER_noSound_source {
@@ -49,7 +51,7 @@ class UserActions {
         displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
         displayName = "$STR_DN_OUT_O_DOOR";
         textToolTip = "$STR_DN_OUT_O_DOOR";
-        position = "door_action_point";
+        position = "door_NUMBER_trigger";
         radius = 4;
         aiMaxRange = 5.25;
         priority = 100;
@@ -68,6 +70,24 @@ class UserActions {
 };
 ```
 
+### Sounds
+```cpp
+class CfgAnimationSourceSounds {
+    class YourPrefix_door {
+        class Open {
+            loop = 0;
+            terminate = 0;
+            trigger = "direction";
+            sound0[] = {"\path\to\sound.wss", 0.4, 1};
+            sound[] = {"sound0", 1};
+        };
+        class Close: Open {
+            trigger = "1 - direction";
+            sound0[] = {"\path\to\sound.wss", 0.4, 1};
+        };
+    };
+};
+```
 ## Other
 A few other related config properties for doors.
 
@@ -77,7 +97,7 @@ numberOfDoors = 1;
 ```
 
 ## model.cfg
-Here the animations can be set up however, like a rotation for a "normal" door or a translation. Since `BIS_fnc_door` uses `animateSource`, the animation names in the model.cfg aren't relevant, as long as they are set to the correct `AnimationSources` class.
+Here the animations can be set up however, like a rotation for a "normal" door or a translation. Since `BIS_fnc_door` uses `animateSource`, the animation names in the `model.cfg` aren't relevant, as long as they are set to the correct `AnimationSources` class.
 
 ### Rotation
 ```cpp
@@ -123,8 +143,33 @@ class Animations {
 };
 ```
 
+### Multi-part door
+For doors that have multiple door sections / animations for a single openable door (e.g. sci-fi doors that slide in two directions or even just double doors), each part of the door should be numbered with the door's number and then lettered starting with `a`.
+```cpp
+class Animations {
+    class open_door_1a {
+        type = "translation";
+        source = "Door_1_sound_source";
+        sourceAddress = "clamp";
+        selection = "door_1a";
+        axis = "door_1a_axis";
+        memory = 1;
+        minValue = 0;
+        maxValue = 1;
+        offset0 = 0;
+        offset1 = 1;
+    };
+    class open_door_1b: open_door_1a {
+        selection = "door_1b";
+        axis = "door_1b_axis";
+    };
+};
+```
+
 # Macros & Functions
 For convenience, you may want to set up macros and functions to make setting up doors easier. These were developed for [Legion Studios: Battlefields](https://steamcommunity.com/sharedfiles/filedetails/?id=2320596778). If you are a member of Legion Studios' dev team, you can see them on the Battlefields GitHub repository.
+
+These will soon be added to the Public Legion Studios: Core github repository, so they'll be more available then.
 
 [Macros](https://github.com/Legion-Studios/Battlefields/tree/main/addons/main/script_macros.hpp)
 [UserActions](https://github.com/Legion-Studios/Battlefields/tree/main/addons/common/UserActions.hpp)
