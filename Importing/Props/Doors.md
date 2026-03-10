@@ -19,7 +19,7 @@ class AnimationSources {
         initPhase = 0;
         animPeriod = 1;
         sound = "YourPrefix_door"; // class in CfgAnimationSourceSounds
-        soundPosition = "door_action_point"; // memory point for sound origin
+        soundPosition = "door_NUMBER_trigger"; // memory point for sound origin (usually action position)
     };
     class Door_NUMBER_noSound_source {
         source = "user";
@@ -132,8 +132,8 @@ class Animations {
         type = "translation";
         source = "Door_1_sound_source";
         sourceAddress = "clamp";
-        selection = "door1";
-        axis = "door1_axis";
+        selection = "door_1";
+        axis = "door_1_axis";
         memory = 1;
         minValue = 0;
         maxValue = 1;
@@ -165,6 +165,13 @@ class Animations {
     };
 };
 ```
+
+## Model
+The exact setup will vary depending on how you want to animate your door, so this will just cover the basic requirements.
+### Selections
+Each door should have its own selection, named `door_NUMBER`. For doors that have multiple moving parts (e.g. two doors tied to a single action), they should be lettered as well beginning with `a`, e.g. `door_1a`, `door_1b`, etc.
+### Memory Points
+Each door should have a memory point for the location of the action, and should be named `door_NUMBER_trigger`. The axis that the door moves along should also be named `door_NUMBER_axis`.
 
 # Macros & Functions
 For convenience, you may want to set up macros and functions to make setting up doors easier. These were developed for [Legion Studios: Battlefields](https://steamcommunity.com/sharedfiles/filedetails/?id=2320596778). If you are a member of Legion Studios' dev team, you can see them on the Battlefields GitHub repository.
