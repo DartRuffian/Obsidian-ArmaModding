@@ -113,7 +113,7 @@ class Animations {
         angle1 = 0;
     };
     class door_left_locked_rot: door_left_rotate {
-        source = "door_1_locked_source";
+        source = "Door_1_locked_source";
         sourceAddress = "mirror";
         minValue = 0.1;
         maxValue = 0.2;
