@@ -2,13 +2,80 @@ How to implement doors on objects the vanilla way. The vanilla way should almost
 
 This page currently only covers doors without handles, as they're the only type I've implemented in-game so far.
 
+## Scripting
+`BIS_fnc_door` is the main function to handle the opening and closing of doors, and it takes the object, door number, and the target animation phase to open/close the door to.
+
+For example, this will fully open the first door of the object you're looking at.
+```sqf
+[cursorObject, 1, 1] call BIS_fnc_door;
+```
+
+This will close the first door:
+```sqf
+[cursorObject, 1, 0] call BIS_fnc_door;
+```
+
+Doors can also be locked, by setting the `BIS_disabled_door_NUMBER` variable to `1` (`0` = unlocked). This will not hide the "Open Door" action, but will instead play the door's locked animation instead of opening the door; though the "Close Door" action will be hidden.
 ## Config
 
-`BIS_fnc_door` handles the opening and closing of doors.
-### Animations
-These are the exact animation source names that `BIS_fnc_door` will animate, with `NUMBER` being the door's index (starting from 1).
+### UserActions
+The open / close actions still needed to be added manually via the `UserActions` class. For AI to open the doors, the object will need a correctly configured PATHS lod with named selections (`actionBegin1`, `actionEnd1`, `actionBegin2`, etc.) positioned where AI should open the door from.
 
-The `sound` and `noSound` animation sources will always be used when opening / closing the door, and the `locked` animation will be used when trying to open a locked door.
+```cpp
+actionBegin1 = "OpenDoor_1";
+actionEnd1 = "OpenDoor_1";
+actionBegin2 = "OpenDoor_2";
+actionEnd2 = "OpenDoor_2";
+// etc.
+
+class UserActions {
+    class OpenDoor_NUMBER {
+        displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+        displayName = "$STR_DN_OUT_O_DOOR";
+        textToolTip = "$STR_DN_OUT_O_DOOR";
+        position = "door_NUMBER_trigger";
+        radius = 4;
+        aiMaxRange = 5.25;
+        priority = 100;
+        onlyForPlayer = 0;
+        condition = "((this animationSourcePhase 'Door_NUMBER_sound_source') < 0.03) && (cameraOn isKindOf 'CAManBase') && (alive this)";
+        statement = "[this, NUMBER, 1] call BIS_fnc_door";
+        animPeriod = 1;
+    };
+
+    class CloseDoor_NUMBER: OpenDoor_NUMBER {
+        displayName = "$STR_DN_OUT_C_DOOR";
+        textToolTip = "$STR_DN_OUT_C_DOOR";
+        condition = "((this animationSourcePhase 'Door_1_sound_source') > 0.99) && ((this getVariable ['bis_disabled_Door_NUMBER', 0]) != 1) && (cameraOn isKindOf 'CAManBase') && (alive this)";
+        statement = "[this, NUMBER, 0] call BIS_fnc_door";
+    };
+};
+```
+
+### Sounds
+Sounds for your door opening / closing are configured through `CfgAnimationSourceSounds`.
+```cpp
+class CfgAnimationSourceSounds {
+    class YourPrefix_door {
+        class Open {
+            loop = 0;
+            terminate = 0;
+            trigger = "direction";
+            sound0[] = {"\path\to\sound.wss", 0.4, 1};
+            sound[] = {"sound0", 1};
+        };
+        class Close: Open {
+            trigger = "1 - direction";
+            sound0[] = {"\path\to\sound.wss", 0.4, 1};
+        };
+    };
+};
+```
+
+### Animation Sources
+These are the exact animation source names that `BIS_fnc_door` will animate, with `NUMBER` being the door's number (starting from 1).
+
+The `sound` and `noSound` animation sources will always be used when opening / closing the door, and the `locked` animation will be used when trying to open a locked door. 
 
 If there are multiple parts of a door (e.g. double doors), then there should be a selection for each part of the door, and should be named as `door_NUMBERa`, `door_NUMBERb`, etc. For example: `door_1a`, `door_1b`, `door_1c`. For door purposes, there shouldn't be a separate selection that contains all parts of the door, just the individual lettered selections. 
 
@@ -29,67 +96,13 @@ class AnimationSources {
     class Door_NUMBER_locked_source {
         source = "user";
         initPhase = 0;
-        animPeriod = 0.8;
+        animPeriod = 1;
     };
 };
 ```
 
-### UserActions
-The open / close actions still needed to be added manually via the UserActions class.
-
-```cpp
-// These allow AI to use the UserActions to open/close the doors. These point to named selections in the Path lod.
-// The begin and end points should be on the opposite sides of the door.
-actionBegin1 = "OpenDoor_1";
-actionEnd1 = "OpenDoor_1";
-actionBegin2 = "OpenDoor_2";
-actionEnd2 = "OpenDoor_2";
-// etc.
-
-class UserActions {
-    class OpenDoor_NUMBER {
-        displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-        displayName = "$STR_DN_OUT_O_DOOR";
-        textToolTip = "$STR_DN_OUT_O_DOOR";
-        position = "door_NUMBER_trigger";
-        radius = 4;
-        aiMaxRange = 5.25;
-        priority = 100;
-        onlyForPlayer = 0;
-        condition = "((this animationSourcePhase 'Door_NUMBER_sound_source') < 0.03) && (cameraOn isKindOf 'CAManBase') && (alive this)";
-        statement = "[this, NUMBER, 1] call BIS_fnc_door"; // [object, doorIndex, state] → state: 0=closed, 1=open
-        animPeriod = 1;
-    };
-
-    class CloseDoor_NUMBER: OpenDoor_NUMBER {
-        displayName = "$STR_DN_OUT_C_DOOR";
-        textToolTip = "$STR_DN_OUT_C_DOOR";
-        condition = "((this animationSourcePhase 'Door_1_sound_source') > 0.99) && ((this getVariable ['bis_disabled_Door_NUMBER', 0]) != 1) && (cameraOn isKindOf 'CAManBase') && (alive this)";
-        statement = "[this, NUMBER, 0] call BIS_fnc_door";
-    };
-};
-```
-
-### Sounds
-```cpp
-class CfgAnimationSourceSounds {
-    class YourPrefix_door {
-        class Open {
-            loop = 0;
-            terminate = 0;
-            trigger = "direction";
-            sound0[] = {"\path\to\sound.wss", 0.4, 1};
-            sound[] = {"sound0", 1};
-        };
-        class Close: Open {
-            trigger = "1 - direction";
-            sound0[] = {"\path\to\sound.wss", 0.4, 1};
-        };
-    };
-};
-```
 ## Other
-A few other related config properties for doors.
+Other miscellaneous door config properties.
 
 ```cpp
 // Anount of doors the object has. Checked by other scripts to get the number of doors, e.g. the Eden property that lets user open/close/lock specific doors

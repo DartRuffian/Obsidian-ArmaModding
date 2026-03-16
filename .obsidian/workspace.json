@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "67e0443cc8a281e7",
+        "id": "843534a9784378ea",
         "type": "tabs",
         "children": [
           {
-            "id": "abb6a27c1cf425ab",
+            "id": "ea59c279c24b725a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -166,8 +166,12 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "abb6a27c1cf425ab",
+  "active": "ea59c279c24b725a",
   "lastOpenFiles": [
+    "Legion Studios/Core/Fusion Cutter/Features/(Un)Locking Doors.md",
+    "Legion Studios/Core/Fusion Cutter/Fusion Cutter.md",
+    "Legion Studios/Core/Fusion Cutter/Wishlist/Wishlist.md",
+    "Importing/Props/Doors.md",
     "Multi-part door.md",
     "Websites.md",
     "Untitled.base",
@@ -181,7 +185,6 @@
     "Importing/Animations/Gestures",
     "Importing/Animations/Animations.md",
     "Importing/Animations/Moves",
-    "Importing/Props/Doors.md",
     "Importing/Animations",
     "Mortar AI/Statemachine/Statemachine.md",
     "Mortar AI/Statemachine/States.md",
@@ -205,9 +208,6 @@
     "MCC Explosives Rewrite/MCC Explosives Rewrite.md",
     "Mortar AI/Features",
     "Importing/Vehicles/Behavior.md",
-    "Importing/Vehicles/Config Errors.md",
-    "Scripting Notes/Vectors.md",
-    "21st Nova Corps/Kit Builder/Kit Builder.md",
     "rappel.png",
     "zipline.png",
     "Legion Studios/Core/Ascension Cables/Images/rappel.png",
