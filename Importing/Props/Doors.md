@@ -46,7 +46,7 @@ class UserActions {
     class CloseDoor_NUMBER: OpenDoor_NUMBER {
         displayName = "$STR_DN_OUT_C_DOOR";
         textToolTip = "$STR_DN_OUT_C_DOOR";
-        condition = "((this animationSourcePhase 'Door_1_sound_source') > 0.99) && ((this getVariable ['bis_disabled_Door_NUMBER', 0]) != 1) && (cameraOn isKindOf 'CAManBase') && (alive this)";
+        condition = "((this animationSourcePhase 'Door_NUMBER_sound_source') > 0.99) && ((this getVariable ['bis_disabled_Door_NUMBER', 0]) != 1) && (cameraOn isKindOf 'CAManBase') && (alive this)";
         statement = "[this, NUMBER, 0] call BIS_fnc_door";
     };
 };
