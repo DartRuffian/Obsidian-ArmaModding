@@ -3,3 +3,4 @@
 # Mods
 [[Core]]
 [[Battlefields]]
+[[Insurrection]]

@@ -2,3 +2,4 @@
 
 [[Fusion Cutter]]
 [[Ascension Cables]]
+[[Grenades]]

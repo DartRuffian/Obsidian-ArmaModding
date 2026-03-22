@@ -23,4 +23,5 @@ Max length of 90 meters (arma has limit of 100m, so no issue)
 ![[rappel.png]]
 ![[zipline.png]]
 [[Legion Studios/Core/Ascension Cables/Features/Features|Features]]
+[[Legion Studios/Core/Ascension Cables/Research/Research|Research]]
 [[Crimzon's Test Script]]
