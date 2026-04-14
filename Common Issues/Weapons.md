@@ -9,7 +9,7 @@ There are several common issues when trying to set the `picture` of an item. Fir
 
 The other common, but more complex, issue is when a weapon is configured to use the old system for pictures where you'd create separate icons for the weapon on its own, the weapon with an optic attached, the weapon with an optic and a bipod attached, etc. etc.
 
-To fix the issue, `iconScale` in each `xSlot` class needs to be set to a value greater than 0.
+To fix the issue, `iconScale` in each `xSlot` class needs to be set to a value greater than 0 and less than 1.
 ```cpp
 class WeaponSlotsInfo: WeaponSlotsInfo {
     class CowsSlot: CowsSlot {
