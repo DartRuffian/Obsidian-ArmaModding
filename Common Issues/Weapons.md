@@ -76,3 +76,32 @@ class LinkedItemsOptic {
     item = "";
 };
 ```
+
+## Infinite Ammo
+If your gun has infinite ammo / can be fired repeatedly, it's likely an issue with your fire mode classes. This usually happens when you try to define the `Mode_X` classes *in `CfgWeapons`*, when they're actually defined in config root.
+
+```cpp
+// ! Wrong !
+class CfgWeapons {
+    class Mode_SemiAuto;
+    class MyGun {
+	    class Single: Mode_SemiAuto {
+	        // ...
+	    };
+    };
+};
+```
+
+`Mode_SemiAuto` isn't defined here, so you end up missing the vast majority of the data required for the fire mode.
+
+```cpp
+// Correct
+class Mode_SemiAuto;
+class CfgWeapons {
+    class MyGun {
+	    class Single: Mode_SemiAuto {
+	        // ...
+	    };
+    };
+};
+```

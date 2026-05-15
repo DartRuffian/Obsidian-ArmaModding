@@ -16,7 +16,9 @@ Non lethal grenade that creates a bright flash and loud noise when activated. Af
 Emits toxic gas, would choke to death organics that stayed in the gas long enough. Used by BX droids
 
 ### Features
-- Emit green smoke, causing damage over time affect (?)
+- Emit green smoke, causing damage over time affect
+- KAT airways compat?
+- Needs some way to treat it for ACE
 
 ## Bacta Grenade
 Also called "bacta bomb", heals organics over time. **Must take great consideration into balancing, can very easily become way too strong.**
