@@ -15,7 +15,7 @@ This will close the first door:
 [cursorObject, 1, 0] call BIS_fnc_door;
 ```
 
-Doors can also be locked, by setting the `BIS_disabled_door_NUMBER` variable to `1` (`0` = unlocked). This will not hide the "Open Door" action, but will instead play the door's locked animation instead of opening the door; though the "Close Door" action will be hidden.
+Doors can also be locked by setting the `BIS_disabled_door_NUMBER` variable to `1` (`0` = unlocked). This will not hide the "Open Door" action, but will instead play the door's locked animation instead of opening the door; though the "Close Door" action will be hidden.
 ## Config
 
 ### UserActions
